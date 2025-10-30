@@ -76,9 +76,9 @@ function showMoves(playerMove, computerMove){
   document.querySelector('.js-moves').innerHTML = 
 
   `You
-  <img class="move-icon" src="/rock-paper-scissor-images/${playerMove}-emoji.png">
-  <img class="move-icon" src="/rock-paper-scissor-images/${computerMove}-emoji.png">
-  Computer`
+  <img class="move-icon" src="rock-paper-scissor-images/${playerMove}-emoji.png">
+  <img class="move-icon" src="rock-paper-scissor-images/${computerMove}-emoji.png">
+  PC1`
 }
 
 function updateScoreElement(){
