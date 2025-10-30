@@ -85,15 +85,21 @@ function updateScoreElement(){
   document.querySelector('.js-score').innerHTML = `Wins: ${score.wins} Losses: ${score.losses} Ties: ${score.ties}`
 }
 
+function getRandom(min, max) {
+  const array = new Uint32Array(1);
+  window.crypto.getRandomValues(array);
+  const range = max - min + 1;
+  return (array[0] % range) + min;
+}
+
 function pickComputerMove(){
-  let randomNumber = Math.random();
+  let randomNumber = getRandom(1, 3);
   let computerMove = '';
-  if(randomNumber >= 0 && randomNumber < 1/3)
-  {computerMove = 'Rock';}
-  else if(randomNumber >= 1/3 && randomNumber < 2/3)
-  {computerMove = 'Paper';}
-  else if(randomNumber >= 2/3 && randomNumber < 1)
-  {computerMove = 'Scissors';}
+  switch (randomNumber) {
+    case 1: computerMove = 'Rock'; break;
+    case 2: computerMove = 'Paper'; break;
+    case 3: computerMove = 'Scissors'; break;
+  }
 
   return computerMove;
 }
