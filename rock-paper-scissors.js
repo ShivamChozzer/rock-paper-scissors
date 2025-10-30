@@ -76,8 +76,8 @@ function showMoves(playerMove, computerMove){
   document.querySelector('.js-moves').innerHTML = 
 
   `You
-  <img class="move-icon" src="/Project-rock-paper-scissors/rock-paper-scissor-images/${playerMove}-emoji.png">
-  <img class="move-icon" src="/Project-rock-paper-scissors/rock-paper-scissor-images/${computerMove}-emoji.png">
+  <img class="move-icon" src="rock-paper-scissor-images/${playerMove}-emoji.png">
+  <img class="move-icon" src="rock-paper-scissor-images/${computerMove}-emoji.png">
   Computer`
 }
 
